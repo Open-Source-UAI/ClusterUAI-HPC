@@ -1,0 +1,313 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      <link rel="icon" href="/assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
+    
+    
+      
+        <title>HPC Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="/assets/stylesheets/main.ded33207.min.css">
+      
+        
+        <link rel="stylesheet" href="/assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/." title="HPC Documentation" class="md-header__button md-logo" aria-label="HPC Documentation" data-md-component="logo">
+      
+  <img src="data:image/png;base64,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" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HPC Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Open-Source-UAI/cluster-hpc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Open-Source-UAI/cluster-hpc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/." title="HPC Documentation" class="md-nav__button md-logo" aria-label="HPC Documentation" data-md-component="logo">
+      
+  <img src="data:image/png;base64,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" alt="logo">
+
+    </a>
+    HPC Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Open-Source-UAI/cluster-hpc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Open-Source-UAI/cluster-hpc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/." class="md-nav__link">
+        Welcome to (HPC) documentation of Adolfo Ibanez University!
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  <h1>404 - Not found</h1>
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Universidad Adolfo Ibañez, Open Source UAI
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Open-Source-UAI" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="/assets/javascripts/bundle.51198bba.min.js"></script>
+      
+    
+  </body>
+</html>
